@@ -9,3 +9,15 @@ def fibs(n)
 
   sequence
 end
+
+def fibs_rec(n)
+  return [0] if n == 1
+  return [0, 1] if n == 2
+
+  if n >= 3
+    sequence = fibs_rec(n - 1)
+    sequence << sequence[-1] + sequence[-2]
+  end
+
+  sequence
+end
